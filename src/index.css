@@ -2,6 +2,11 @@
 @import "tw-animate-css";
 @import "@fontsource/inter";
 
+@theme {
+  --color-primary: #115533;
+  --color-secondary: #fff;
+}
+
 body {
   font-family: "inter", sans-serif;
 }

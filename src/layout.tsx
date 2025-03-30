@@ -6,7 +6,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="mx-auto max-w-[80rem] transition-all duration-300">
+    <div className="mx-auto w-full max-w-[80rem] transition-all duration-300">
       {children}
     </div>
   );
