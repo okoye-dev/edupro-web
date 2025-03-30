@@ -3,7 +3,7 @@
 A modern AI web application built with:
 
 - React (Vite)
-- TypeScript
+- TypeScript + SWC
 - Shadcn
 - ESLint
 
