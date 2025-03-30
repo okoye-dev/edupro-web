@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource/inter";
+
+body {
+  font-family: "inter", sans-serif;
+}
