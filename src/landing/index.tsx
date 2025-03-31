@@ -1,33 +1,35 @@
-import { Button } from "@/shared/components/ui";
-import { Link } from "react-router";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/shared/components/ui/accordion";
+import { useEffect } from "react";
+import Navbar from "@/landing/components/Navbar";
+import HeroSection from "@/landing/components/HeroSection";
+import FeaturesSection from "@/landing/components/FeaturesSection";
+import TestimonialsSection from "@/landing/components/TestimonialsSection";
+import FAQSection from "@/landing/components/FAQSection";
+import CTASection from "@/landing/components/CTASection";
+import Footer from "@/landing/components/Footer";
+import { motion } from "framer-motion";
 
 export const LandingPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1>LandingPage</h1>
-
-      <Button asChild>
-        <Link to="/chat" className="text-white">
-          Get Started
-        </Link>
-      </Button>
-
-      <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger className="w-full">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    </div>
+    <motion.div
+      className="min-h-screen overflow-x-hidden bg-dark-background"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Navbar />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <CTASection />
+      </main>
+      <Footer />
+    </motion.div>
   );
 };
